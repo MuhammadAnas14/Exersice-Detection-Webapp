@@ -1,13 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Login from "./Components/Login";
+import Layout from "./Components/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Exercise Detection</h1>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route  path="/" element={<Login/>}></Route>
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
