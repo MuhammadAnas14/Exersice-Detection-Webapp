@@ -6,11 +6,9 @@ import Layout from "./Components/Layout";
 function App() {
   return (
     <Router>
-      <Layout>
         <Routes>
           <Route  path="/" element={<Login/>}></Route>
         </Routes>
-      </Layout>
     </Router>
   );
 }

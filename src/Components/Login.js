@@ -1,14 +1,18 @@
 import React from 'react'
-
-
+import bImage from './Assets/backImage.png'
+import {Image} from 'react-bootstrap'
+import './CSS/login.css'
 
 
 const Login = () => {
 
     return(
-        <div>
-            <h1>Login</h1>
-        </div>
+
+     <div className = "login-screen">
+         <Image className = "bg" src={bImage} fluid />
+
+
+     </div>
     )
 }
 
