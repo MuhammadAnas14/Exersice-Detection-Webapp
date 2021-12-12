@@ -8,6 +8,7 @@ function App() {
     <Router>
         <Routes>
           <Route  path="/" element={<Login/>}></Route>
+          <Route path= "/main" element={<Layout/>} />
         </Routes>
     </Router>
   );
