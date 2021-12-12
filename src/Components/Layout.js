@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "./CSS/layout.css";
+import Home from './home'
 
 const Layout = (props) => {
   return (
@@ -8,7 +9,7 @@ const Layout = (props) => {
       <header className="sticky-top">
         <Navbar />
       </header>
-      <main className="main-content">{props.children}</main>
+      <main className="main-content"><Home/></main>
     </div>
   );
 };
