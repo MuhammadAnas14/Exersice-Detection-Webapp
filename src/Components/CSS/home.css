@@ -8,6 +8,14 @@
   margin-top: 30px;
 }
 
+.wrapper3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  margin-left: -3px;
+}
+
 .head {
   margin-top: 45px;
   font-family: Montserrat;
@@ -20,9 +28,21 @@
   width: 164px !important;
   margin: 45px;
 }
+
+.card{ 
+    border-radius: 15px !important;
+    border: 3px solid rgba(0,0,0,.125) !important;
+}
 .card-body {
   justify-content: center;
   display: flex;
   font-weight: bold;
   margin: 20px;
+}
+
+button.btn.btn-primary{
+    padding: .775rem 10.15rem;
+    background-color: #2E69FF;
+    margin-top: 0;
+    box-shadow: 0 14px 80px rgb(34 35 58 / 20%);
 }
