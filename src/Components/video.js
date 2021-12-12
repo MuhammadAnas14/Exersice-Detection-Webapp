@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Container, Button } from "react-bootstrap";
+import {Container, Button } from "react-bootstrap";
 import "./CSS/video.css";
 
 const Video = () => {

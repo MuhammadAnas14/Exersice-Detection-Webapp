@@ -4,6 +4,8 @@ import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import pushUp from "./Assets/push-up.png";
 import biceps from "./Assets/biceps.png";
 import Shoulder from "./Assets/shoulder.png";
+import {Link } from "react-router-dom";
+
 
 const Home = () => {
   return (
@@ -41,7 +43,7 @@ const Home = () => {
         </Row>
       </div>
       <div className="wrapper3">
-        <Button variant="primary">Confirm</Button>
+      <Link to="/video"><Button variant="primary">Confirm</Button></Link>
       </div>
     </Container>
   );

@@ -1,6 +1,5 @@
 import React from "react";
-import bImage from "./Assets/backImage.png";
-import { Image, Container  ,Button} from "react-bootstrap";
+import { Container  ,Button} from "react-bootstrap";
 import {Link } from "react-router-dom";
 import "./CSS/login.css";
 
