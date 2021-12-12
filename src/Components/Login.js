@@ -1,6 +1,7 @@
 import React from "react";
 import bImage from "./Assets/backImage.png";
 import { Image, Container  ,Button} from "react-bootstrap";
+import {Link } from "react-router-dom";
 import "./CSS/login.css";
 
 const Login = () => {
@@ -24,8 +25,8 @@ const Login = () => {
                   <input class="form-control" type="text" />
                 </div>
               </div>
-              <div>
-              <Button variant="primary">Log In</Button>
+              <div className="btn-pos">
+              <Link to="/main"><Button variant="primary">Log In</Button></Link>
               </div>
             </form>
           </div>
