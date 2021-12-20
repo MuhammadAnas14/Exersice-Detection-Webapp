@@ -1,6 +1,6 @@
 
 .login-screen{
-    background-image: url(http://localhost:3000/static/media/backImage.a346546f.png);
+    background-image: url(../Assets/backImage.png);
     background-size: cover;
     padding: 50px 0;
     display: flex;
@@ -21,7 +21,7 @@
 .inner{
     background: #ffff;
     box-shadow: 0 14px 80px #787878;
-    padding: 40px 55px 45px;
+    padding: 25px 55px 45px;
     transition: all .3s;
     margin: 13% auto;
     border-radius: 20px;
