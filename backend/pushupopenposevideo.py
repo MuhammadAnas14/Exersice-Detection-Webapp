@@ -62,7 +62,7 @@ threshold = 0.18
 
 
 input_source = args.video_file
-cap = cv2.VideoCapture('10.mp4')
+cap = cv2.VideoCapture('push-up.mp4')
 hasFrame, frame = cap.read()
 
 vid_writer = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame.shape[1],frame.shape[0]))
