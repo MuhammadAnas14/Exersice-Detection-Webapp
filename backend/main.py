@@ -6,7 +6,8 @@ from pymongo import MongoClient
 from flask_cors import CORS
 CORS(app)
 from pushupopenposevideo import PushUps
-from shoulderpress import ShoulderPress   
+from shoulderpress import ShoulderPress 
+from bicepcurls import BicepCurls  
 
 @app.route("/", methods=["GET"])
 def Gettingstarted():
@@ -30,6 +31,11 @@ def video_feed():
 @app.route('/shoulderPressFeeds')
 def video_feed2():
     return Response(gen(ShoulderPress()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/BicepCurlsFeeds')
+def video_feed3():
+    return Response(gen(BicepCurls()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
