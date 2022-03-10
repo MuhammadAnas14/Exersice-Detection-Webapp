@@ -5,7 +5,8 @@ import numpy as np
 from pymongo import MongoClient
 from flask_cors import CORS
 CORS(app)
-from pushupopenposevideo import VideoCamera
+from pushupopenposevideo import PushUps
+from shoulderpress import ShoulderPress   
 
 @app.route("/", methods=["GET"])
 def Gettingstarted():
@@ -21,10 +22,16 @@ def gen(camera):
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 
-@app.route('/video_feed')
+@app.route('/pushupsFeeds')
 def video_feed():
-    return Response(gen(VideoCamera()),
+    return Response(gen(PushUps()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/shoulderPressFeeds')
+def video_feed2():
+    return Response(gen(ShoulderPress()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050, threaded=True, use_reloader=False)
