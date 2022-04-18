@@ -1,13 +1,53 @@
-import React from "react";
+import React ,{useState} from "react";
 import "./CSS/home.css";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import {useNavigate} from 'react-router-dom'
 import pushUp from "./Assets/push-up.png";
 import biceps from "./Assets/biceps.png";
 import Shoulder from "./Assets/shoulder.png";
-import {Link } from "react-router-dom";
-
 
 const Home = () => {
+
+  const [Exercise, setExercise] = useState("");
+
+  
+
+  const navigate = useNavigate()
+
+  const bicepsHandler = () => {
+
+    setExercise("bicepsExersice")
+  }
+
+
+  const pushupsHandler = () => {
+
+    setExercise("pushupsExersice")
+  }
+
+  const shoulderHandler = () => {
+
+    setExercise("shoulderExersice")
+  }
+
+  const submitExercise = () => {
+
+    console.log(Exercise)
+
+    if (Exercise === "bicepsExersice"){
+      navigate('/video')
+
+    }
+    if (Exercise === "pushupsExersice"){
+      navigate('/video1')
+
+    }
+    if (Exercise === "shoulderExersice"){
+      navigate('/video2')
+
+    }
+  }
+
   return (
     <Container>
       <div className="wrapper">
@@ -17,7 +57,7 @@ const Home = () => {
       <div className="wrapper2">
         <Row>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} onMouseOver={bicepsHandler}>
               <Card.Img variant="top" className="image-icon" src={biceps} />
               <Card.Body>
                 <Card.Title>Biceps Curl</Card.Title>
@@ -25,7 +65,7 @@ const Home = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} onMouseOver={pushupsHandler}>
               <Card.Img variant="top" className="image-icon" src={pushUp} />
               <Card.Body>
                 <Card.Title>Push Ups</Card.Title>
@@ -33,7 +73,7 @@ const Home = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} onMouseOver={shoulderHandler}>
               <Card.Img variant="top" className="image-icon" src={Shoulder} />
               <Card.Body>
                 <Card.Title>Shoulder Press</Card.Title>
@@ -43,7 +83,7 @@ const Home = () => {
         </Row>
       </div>
       <div className="wrapper3">
-      <Link to="/video"><Button variant="primary">Confirm</Button></Link>
+        <Button variant="primary" onClick={submitExercise}>Confirm</Button>
       </div>
     </Container>
   );
