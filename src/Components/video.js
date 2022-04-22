@@ -1,10 +1,16 @@
 import React from "react";
 import {Container, Button,Image } from "react-bootstrap";
 import "./CSS/video.css";
-
+import {useNavigate} from 'react-router-dom'
 
 
 const Video = () => {
+
+  const navigate = useNavigate()
+
+  const goBackMain = () => {
+    navigate('/main')
+  }
   return (
     <div className="video-screen">
       {/* <video className='videoTag' autoPlay loop>
@@ -16,7 +22,7 @@ const Video = () => {
           <h3 className="head1">Web cam is started</h3>
         </div>
         <div className="btn-pos">
-          <Button variant="primary">Stop</Button>
+          <Button onClick={goBackMain} variant="primary">Stop</Button>
         </div>
 
       </Container>

@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-  margin-left: -3px;
+  margin-left: -60px;
 }
 
 .head {
@@ -47,7 +47,21 @@ button.btn.btn-primary{
     box-shadow: 0 14px 80px rgb(34 35 58 / 20%);
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
+
+.card1{
+  border: 3px solid lightblue!important;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+/* .card:focus{
+  background-color: #a74850 !important;
+  border-color: #a74850 !important;
+  outline: none !important;
+  box-shadow: none;
+} */
